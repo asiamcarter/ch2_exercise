@@ -6,37 +6,42 @@ header ul {
     display: flex;
 }
 
-ul li {
+header li {
     margin: 10px;
     list-style: none;
-}
-
-
-a.disabled  {
-    color: purple;
 }
 
 .disabled {
     color: grey;
 }
 
+a .disabled, 
+a.disabled  {
+    color: purple;
+}
 
 .active {
     color: yellow;
 }
 
+/* jisie solution: .parent > div > div {
+    color: red;
+} */
 .parent > div > div:nth-child(1) {
     color: red;
 }
 
+/* jisie solution: .parent > div > div + h4 */
 .parent > div > div:nth-child(3) {
     color: blue;
 }
+
 
 .parent > div > div:nth-child(1) + h4 {
     background-color: red;
 }
 
+/* jisie solution: .parent > div > h4 + div + h4 */
 .parent > div > div:nth-child(3) + h4 {
     background-color: blue;
 }
@@ -50,6 +55,10 @@ a.disabled  {
     font-weight: bold;
     color: gold;
 }
+
+/* footer input {
+    height: 25px;
+} */
 
 input[type=text] {
     height: 25px;
